@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '@/assets/sass/_variables.sass'
 *
   font-family: $font-main, sans-serif
