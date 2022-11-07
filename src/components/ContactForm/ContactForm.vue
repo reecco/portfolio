@@ -40,30 +40,29 @@ export default {
       let name = this.name == '' || this.name == ' '
       let text = this.text == '' || this.text == ' '
 
+      if (email || name || text) {
+        this.alert = alert
+        setTimeout(() => this.alert = '', 5000)
+      }
+
       if (email) {
         emailInput.style.borderColor = 'red'
         emailInput.style.borderWidth = '2px'
-        this.alert = alert
         setTimeout(() => {
-          this.alert = ''
           emailInput.style.borderColor = ''
           emailInput.style.borderWidth = ''
         }, 5000)
       } else if (name) {
         nameInput.style.borderColor = 'red'
         nameInput.style.borderWidth = '2px'
-        this.alert = alert
         setTimeout(() => {
-          this.alert = ''
           nameInput.style.borderColor = ''
           nameInput.style.borderWidth = ''
         }, 5000)
       } else if (text) {
         textArea.style.borderColor = 'red'
         textArea.style.borderWidth = '2px'
-        this.alert = alert
         setTimeout(() => {
-          this.alert = ''
           textArea.style.borderColor = ''
           textArea.style.borderWidth = ''
         }, 5000)
