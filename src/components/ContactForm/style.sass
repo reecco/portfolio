@@ -1,0 +1,51 @@
+@import '@/assets/sass/_variables.sass'
+
+.contact__form
+  display: flex
+  flex-direction: column
+
+  &-title
+    font-size: 1.6rem
+
+  form
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .message
+      color: #e3501fee
+
+    .input
+      margin: 20px
+      width: 500px
+      height: 50px
+      padding-left: 10px
+      font-size: 1.2rem
+      border-radius: 10px
+      border: 1px solid #000
+
+    .textarea
+      margin: 20px
+      width: 500px
+      height: 200px
+      resize: none
+      padding-top: 10px
+      padding-left: 10px
+      font-size: 1.2rem
+      border-radius: 10px
+
+    .btn-send
+      padding: 10px 60px
+      font-size: 1.2rem
+      border-radius: 10px
+      border: none
+      color: #FEFEFE
+      background-color: #243658
+      transition: .4s
+
+      &:hover
+        cursor: pointer
+        opacity: 0.6
+
+      &:active
+        opacity: 0.9

@@ -1,0 +1,20 @@
+@import '@/assets/sass/_variables.sass'
+
+nav
+  padding-top: 5px
+  display: flex
+  justify-content: center
+
+  a
+    font-weight: 500
+    color: $color-text
+    font-size: 1.3rem
+    text-decoration: none
+    margin: 40px 10px
+    transition: .3s
+
+    &:hover
+      opacity: 0.6
+
+  a.router-link-exact-active
+    opacity: 0.7
