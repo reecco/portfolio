@@ -46,26 +46,17 @@ export default {
       }
 
       if (email) {
-        emailInput.style.borderColor = 'red'
-        emailInput.style.borderWidth = '2px'
-        setTimeout(() => {
-          emailInput.style.borderColor = ''
-          emailInput.style.borderWidth = ''
-        }, 5000)
+        emailInput.style.border = '2px solid red'
+        
+        setTimeout(() => emailInput.style.border = '' , 5000)
       } else if (name) {
-        nameInput.style.borderColor = 'red'
-        nameInput.style.borderWidth = '2px'
-        setTimeout(() => {
-          nameInput.style.borderColor = ''
-          nameInput.style.borderWidth = ''
-        }, 5000)
+        nameInput.style.border = '2px solid red'
+
+        setTimeout(() => nameInput.style.border = '' , 5000)
       } else if (text) {
-        textArea.style.borderColor = 'red'
-        textArea.style.borderWidth = '2px'
-        setTimeout(() => {
-          textArea.style.borderColor = ''
-          textArea.style.borderWidth = ''
-        }, 5000)
+        textArea.style.border = '2px solid red'
+
+        setTimeout(() => textArea.style.border = '' , 5000)
       } else {
         const res = await api(this.email, this.name, this.text)
 
