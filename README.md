@@ -1,4 +1,10 @@
-# portfolio
+# Portfolio
+
+### Built with
+
+- Vue.js
+- Email API with Axios
+- Sass
 
 ## Project setup
 ```
