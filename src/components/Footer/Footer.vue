@@ -1,6 +1,7 @@
 <template>
   <footer>
     <p>&copy; 2022</p>
+    <p>Built by Fred Recco</p>
   </footer>
 </template>
 

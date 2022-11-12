@@ -1,13 +1,14 @@
 @import '@/assets/sass/_variables.sass'
-  
+
 .home
   color: $color-text
   margin-top: 2%
-  min-height: 590px
+  min-height: 690px
 
   .home__photo
     display: flex
     justify-content: center
+    margin-bottom: 1%
 
     .photo
       width: 150px
@@ -17,52 +18,55 @@
       background-position: left
       background-repeat: no-repeat
       border-radius: 50%
-      transition: .2s
+      transition: .5s
+      border: 10px solid #000
 
       &:hover
+        scale: 1.05
         box-shadow: 2px 2px 8px #555252
 
-  h1, h3
-    text-align: center
+  .home__infos
+    width: 300px
+    background-color: #fdf9f9ee
+    border-radius: 30px
+    padding-top: 5px
+    padding-bottom: 10px
+    margin: 0 auto
 
-  h1
-    margin-top: 3%
-    font-size: 3rem
-    font-weight: 500
-    text-shadow: 1px 1px 2px $color-text
-  
-  h3
-    font-size: 1.7rem
-    font-weight: 500
-    text-shadow: 1px 1px $color-text
+    h1, h3
+      text-align: center
 
-// @media (max-width: 500px)
-//   .home
-//     margin-top: 10%
-//     // min-height: 350px
-//     min-height: 0
+    h1
+      font-size: 3rem
+      font-weight: 500
+      text-shadow: 1px 1px 2px $color-text
 
-// @media (max-width: 700px) and (min-width: 501px)
-//   .home
-//     margin-top: 6%
-//     // min-height: 500px
-//     min-height: 0
+    h3
+      font-size: 1.7rem
+      font-weight: 500
+      text-shadow: 1px 1px $color-text
 
-// @media (max-width: 1399px) and (min-width: 701px)
-//   .home
-//     min-height: 340px
-
-@media (max-width: 480px)
+@media (max-width: 420px)
   .home
     margin-top: 10%
+    min-height: 690px
+
+    .home__photo
+      margin-bottom: 5%
+
+    .home__infos
+      width: 60%
+
+      h1
+        font-size: 2rem
+      
+      h3
+        font-size: 1.5rem
+
+@media (max-width: 720px) and (min-width: 421px)
+  .home
+    margin-top: 6%
     min-height: 500px
 
-@media (max-width: 767px) and (min-width: 481px)
-  .home
-    margin-top: 10%
-    min-height: 500px
-
-@media (min-width: 768px) and (max-width: 979px)
-  .home
-    margin-top: 10%
-    min-height: 550px
+    .home__photo
+      margin-bottom: 5%

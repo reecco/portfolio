@@ -3,8 +3,10 @@
     <div class="home__photo">
       <div class="photo"></div>
     </div>
-    <h1>Fred Recco</h1>
-    <h3>Web Developer</h3>
+    <div class="home__infos">
+      <h1>Fred Recco</h1>
+      <h3>Web Developer</h3>
+    </div>
   </div>
 </template>
 

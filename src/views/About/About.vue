@@ -1,23 +1,20 @@
 <template>
   <div class="about">
-    <h2 class="about__title">Sobre</h2>
+    <h2 class="about__title">About</h2>
     <div class="about__text">
       <p class="text">
-        Recém formado em Análise e Desenvolvimento de Sistemas pela UNINOVE - Vila Maria. E a procura de uma primeira
-        oportunidade para trabalhar na área de TI.
+        Recently graduated in Systems Analysis and Development from UNINOVE - Vila Maria. And looking for a first opportunity to work in the IT field.
       </p>
       <p class="text">
-        Gosta de tecnologia desde criança, está em constante aprendizado e sempre buscando por novos desafios. Seus
-        principais hobbies envolvem montagem de computadores, assistir reviews sobre hardwares e estar sempre
-        acompanhando as novidades do mundo tecnológico.
+        He likes technology since he was a child, he is constantly learning and always looking for new challenges. His main hobbies involve building computers, watching hardware reviews and always keeping up with the latest in the technological world.
       </p>
     </div>
     <div class="about__skills">
-      <h3 class="skills__title">Experiência com</h3>
+      <h3 class="skills__title">Experience with</h3>
       <ul class="box__skills">
-        <li class="skills">JavaScript, HTML, CSS, Sass e Vue.js</li>
-        <li class="skills">Node.js, Java, Python e Linux</li>
-        <li class="skills">MySQL, MongoDB e Git</li>
+        <li class="skills">JavaScript, HTML, CSS, Sass and Vue.js</li>
+        <li class="skills">Node.js, Java, Python and Linux</li>
+        <li class="skills">MySQL, MongoDB and Git</li>
       </ul>
     </div>
   </div>

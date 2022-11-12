@@ -6,6 +6,7 @@
 
   &-title
     font-size: 1.6rem
+    text-align: center
 
   form
     display: flex
@@ -17,16 +18,20 @@
       color: #e3501fee
 
     .input
-      margin: 20px
+      margin: 10px
       width: 500px
       height: 50px
       padding-left: 10px
       font-size: 1.2rem
       border-radius: 10px
       border: 1px solid #000
+      transition: .5s
+
+      &:focus
+        scale: 1.01
 
     .textarea
-      margin: 20px
+      margin: 10px
       width: 500px
       height: 200px
       resize: none
@@ -34,6 +39,10 @@
       padding-left: 10px
       font-size: 1.2rem
       border-radius: 10px
+      transition: .5s
+
+      &:focus
+        scale: 1.01
 
     .btn-send
       padding: 10px 60px
@@ -51,7 +60,7 @@
       &:active
         opacity: 0.9
 
-@media (max-width: 500px)
+@media (max-width: 420px)
   .contact__form
 
     &-title
@@ -73,7 +82,7 @@
           outline: #000
           border: 2px solid #000
 
-@media (max-width: 600px) and (min-width: 501px)
+@media (max-width: 720px) and (min-width: 421px)
   .contact__form
 
     form
@@ -82,3 +91,6 @@
 
       .textarea
         width: 400px
+
+      .btn-send
+        padding: 10px 80px

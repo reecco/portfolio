@@ -1,13 +1,12 @@
 <template>
-  <div class="contact contact__form">
-    <h2 class="contact__form-title">Ou me envie uma mensagem</h2>
+  <div class="contact__form">
+    <h2 class="contact__form-title">Send a message</h2>
     <form @submit="sendEmail">
       <p class="message">{{ alert }}</p>
       <input type="text" name="email" class="input input-email" id="input-email" placeholder="Email" v-model="email">
-      <input type="text" name="name" class="input input-name" id="input-name" placeholder="Nome" v-model="name">
-      <textarea type="text" name="text" class="textarea" id="textarea-text" placeholder="Mensagem"
-        v-model="text"></textarea>
-      <button class="btn-send">Enviar mensagem</button>
+      <input type="text" name="name" class="input input-name" id="input-name" placeholder="Name" v-model="name">
+      <textarea type="text" name="text" class="textarea" id="textarea-text" placeholder="Message" v-model="text"></textarea>
+      <button class="btn-send">Send</button>
     </form>
   </div>
 </template>

@@ -1,14 +1,19 @@
 <template>
   <div class="contact">
-    <h1 class="contact__title">Contato</h1>
+    <h1 class="contact__title">Contact</h1>
     <ul class="contact__list">
-      <li v-for="(contact, index) in contacts" :key="index" class="contact-url">
-        <a :href="contact.url" target="_blank">
-          <img :src="contact.image" alt="icon">
+      <li class="contact-url">
+        <a href="https://www.linkedin.com/in/fredericorecco/" target="_blank">
+          <img src="@/assets/images/icons8-linkedin-circled.gif" alt="icon">
+        </a>
+      </li>
+      <li class="contact-url">
+        <a href="https://github.com/reecco" target="_blank">
+          <img src="@/assets/images/icons8-github.gif" alt="icon">
         </a>
       </li>
     </ul>
-    <ContactForm/>
+    <ContactForm />
   </div>
 </template>
 <script>
@@ -29,8 +34,8 @@ export default {
   methods: {
     list() {
       this.contacts = [
-        { 'image': 'https://img.icons8.com/color/512/linkedin-circled.png', 'url': 'https://www.linkedin.com/in/fredericorecco/' },
-        { 'image': 'https://img.icons8.com/color/512/github.png', 'url': 'https://github.com/reecco' },
+        { 'image': '@/assets/images/icons8-linkedin-circled.gif', 'url': 'https://www.linkedin.com/in/fredericorecco/' },
+        { 'image': '@/assets/images/icons8-github.gif', 'url': 'https://github.com/reecco' },
       ]
     }
   },
