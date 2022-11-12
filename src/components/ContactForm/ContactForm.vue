@@ -29,7 +29,7 @@ export default {
   methods: {
     async sendEmail(event) {
       event.preventDefault()
-      const alert = 'Preencha os campos corretamente.'
+      const alert = 'Fill in the fields correctly, the fields in red are mandatory.'
 
       let emailInput = document.getElementById('input-email')
       let nameInput = document.getElementById('input-name')
