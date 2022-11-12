@@ -60,7 +60,7 @@ export default {
         const res = await api(this.email, this.name, this.text)
 
         if (res.status == 201) {
-          this.alert = 'Mensagem enviada com sucesso!'
+          this.alert = 'Message sent successfully!'
           setTimeout(() => this.alert = '', 5000)
         } else {
           this.alert = res.response.data.message
