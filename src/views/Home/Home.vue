@@ -5,21 +5,39 @@
     </div>
     <div class="home__infos">
       <h1>Fred Recco</h1>
-      <h3>Web Developer</h3>
+      <h3 class="typing"></h3>
     </div>
   </div>
 </template>
 
 <script>
+import Typed from 'typed.js'
 
 export default {
   name: 'Home',
   components: {
 
   },
+  
+  methods: {
+    animation() {
+      let options = {
+        strings: ['Web Developer', 'Software Developer', 'Backend Developer'],
+        typeSpeed: 100,
+        showCursor: false,
+        loop: true
+      }
+
+      new Typed('.typing', options)
+    }
+  },
 
   created() {
-    document.title = 'Home'
+    document.title = 'Home' 
+  },
+
+  mounted() {
+    this.animation()
   }
 }
 </script>
