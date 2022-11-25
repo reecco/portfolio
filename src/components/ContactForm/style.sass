@@ -60,6 +60,54 @@
       &:active
         opacity: 0.9
 
+  .modal
+    display: none
+    position: fixed
+    background-color: rgba(0, 0, 0, 0.5)
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    padding-top: 10%
+
+    .conteudo-modal
+      min-height: 150px
+      margin: 0 auto
+      margin-top: 3%
+      max-width: 600px
+      background-color: #fff
+      border-radius: 20px
+
+  .body-modal
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 1px 8px 8px 8px
+    flex-direction: column
+    width: 100%
+
+    .message
+      margin-top: 5%
+      font-size: 1.5rem
+
+    .btn-outline-success
+      margin-top: 3%
+      width: 100px
+      border-radius: 10px
+      border: none
+      background-color: #243658
+      color: #fefefe
+      padding: 5px
+      font-size: 1.2rem
+      transition: .4s
+
+      &:hover
+        cursor: pointer
+        opacity: 0.6
+
+      &:active
+        opacity: 0.9
+
 @media (max-width: 420px)
   .contact__form
 
@@ -82,6 +130,13 @@
           outline: #000
           border: 2px solid #000
 
+  .modal
+    height: 150vh
+    padding-top: 50%
+
+  .conteudo-modal
+    max-width: 80%
+
 @media (max-width: 720px) and (min-width: 421px)
   .contact__form
 
@@ -94,3 +149,10 @@
 
       .btn-send
         padding: 10px 80px
+
+  .modal
+    // height: 150vh
+    padding-top: 30%
+
+  .conteudo-modal
+    max-width: 80%
