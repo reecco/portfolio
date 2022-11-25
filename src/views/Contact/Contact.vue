@@ -2,14 +2,9 @@
   <div class="contact">
     <h1 class="contact__title">Contact</h1>
     <ul class="contact__list">
-      <li class="contact-url">
-        <a href="https://www.linkedin.com/in/fredericorecco/" target="_blank">
-          <img src="@/assets/images/icons8-linkedin-circled.gif" alt="icon">
-        </a>
-      </li>
-      <li class="contact-url">
-        <a href="https://github.com/reecco" target="_blank">
-          <img src="@/assets/images/icons8-github.gif" alt="icon">
+      <li class="contact-url" v-for="(contact, index) in contacts" :key="index">
+        <a :href="contact.url" target="_blank">
+          <img :src="contact.image" :alt="contact.alt">
         </a>
       </li>
     </ul>
@@ -34,8 +29,8 @@ export default {
   methods: {
     list() {
       this.contacts = [
-        { 'image': '@/assets/images/icons8-linkedin-circled.gif', 'url': 'https://www.linkedin.com/in/fredericorecco/' },
-        { 'image': '@/assets/images/icons8-github.gif', 'url': 'https://github.com/reecco' },
+        { 'image': require('@/assets/images/icons8-linkedin-circled.gif'), 'url': 'https://www.linkedin.com/in/fredericorecco/', 'alt': 'Linkedin icon' },
+        { 'image': require('@/assets/images/icons8-github.gif'), 'url': 'https://github.com/reecco', 'alt': 'GitHub icon' },
       ]
     }
   },
