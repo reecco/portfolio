@@ -8,30 +8,32 @@
     font-size: 1.6rem
     text-align: center
 
+  .message-error
+    margin-top: 3%
+    min-height: 30px
+    margin-left: 2px
+    color: #e3501fee
+
   form
     display: flex
     flex-direction: column
     align-items: center
 
-    .message
-      margin-top: 2%
-      color: #e3501fee
-
     .input
-      margin: 10px
+      margin: 10px 0
       width: 500px
       height: 50px
       padding-left: 10px
       font-size: 1.2rem
       border-radius: 10px
       border: 1px solid #000
-      transition: .5s
+      transition: .2s
 
       &:focus
         scale: 1.01
 
     .textarea
-      margin: 10px
+      margin: 10px 0
       width: 500px
       height: 200px
       resize: none
@@ -48,6 +50,7 @@
       padding: 10px 60px
       font-size: 1.2rem
       border-radius: 10px
+      margin: 0 auto
       border: none
       color: #FEFEFE
       background-color: #243658
@@ -70,7 +73,7 @@
     height: 100vh
     padding-top: 10%
 
-    .conteudo-modal
+    .content-modal
       min-height: 150px
       margin: 0 auto
       margin-top: 3%
@@ -86,7 +89,7 @@
     flex-direction: column
     width: 100%
 
-    .message
+    .message-success
       margin-top: 5%
       font-size: 1.5rem
 
@@ -116,6 +119,7 @@
       font-size: 1.4rem
 
     form
+
       .input
         width: 100%
 
@@ -134,13 +138,14 @@
     height: 150vh
     padding-top: 50%
 
-  .conteudo-modal
-    max-width: 80%
+    .conteudo-modal
+      max-width: 80%
 
 @media (max-width: 720px) and (min-width: 421px)
   .contact__form
 
     form
+      
       .input
         width: 400px
 
@@ -154,5 +159,5 @@
     // height: 150vh
     padding-top: 30%
 
-  .conteudo-modal
-    max-width: 80%
+    .conteudo-modal
+      max-width: 80%
