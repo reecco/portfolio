@@ -5,7 +5,8 @@ const api = async (email, name, text) => {
     token: process.env.VUE_APP_KEYAPI,
     name: name,
     fromEmail: email,
-    text: text
+    text: text,
+    toEmail: process.env.VUE_APP_TO_EMAIL
   }).then(res => {
     return res
   }).catch(error => {
