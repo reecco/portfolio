@@ -29,8 +29,16 @@ export default {
   methods: {
     list() {
       this.contacts = [
-        { 'image': require('@/assets/images/icons8-linkedin-circled.gif'), 'url': 'https://www.linkedin.com/in/fredericorecco/', 'alt': 'Linkedin icon' },
-        { 'image': require('@/assets/images/icons8-github.gif'), 'url': 'https://github.com/reecco', 'alt': 'GitHub icon' },
+        { 
+          'image': require('@/assets/images/icons8-linkedin-circled.gif'), 
+          'url': 'https://www.linkedin.com/in/fred-recco-a95144259/', 
+          'alt': 'Linkedin icon' 
+        },
+        { 
+          'image': require('@/assets/images/icons8-github.gif'), 
+          'url': 'https://github.com/reecco', 'alt': 
+          'GitHub icon' 
+        },
       ]
     }
   },
