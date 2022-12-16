@@ -48,7 +48,7 @@ export default {
   },
 
   created() {
-    document.title = 'Contato'
+    document.title = 'Contact'
   }
 }
 </script>

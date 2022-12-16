@@ -25,7 +25,7 @@ export default {
   name: 'About',
 
   created() {
-    document.title = 'Sobre'
+    document.title = 'About'
   }
 }
 </script>
