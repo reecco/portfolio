@@ -3,7 +3,7 @@
 ### Built with
 
 - Vue.js
-- Email API with Axios
+- [Email API](https://github.com/reecco/email-api)
 - Sass
 
 ## Project setup
