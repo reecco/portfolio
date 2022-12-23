@@ -46,6 +46,10 @@ export default {
 
   mounted() {
     this.getUser();
+  },
+
+  created() {
+    document.title = 'Activity GitHub'
   }
 }
 </script>
