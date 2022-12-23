@@ -3,7 +3,7 @@
     <h1 class="contact__title">Contact</h1>
     <ul class="contact__list">
       <li class="contact-url" v-for="(contact, index) in contacts" :key="index">
-        <a :href="contact.url" target="_blank">
+        <a :href="contact.url" target="_blank" rel="noopener noreferrer">
           <img :src="contact.image" :alt="contact.alt">
         </a>
       </li>

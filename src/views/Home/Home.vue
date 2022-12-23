@@ -11,13 +11,10 @@
 </template>
 
 <script>
-import Typed from 'typed.js'
+import Typed from 'typed.js';
 
 export default {
   name: 'Home',
-  components: {
-
-  },
   
   methods: {
     animation() {
@@ -28,16 +25,16 @@ export default {
         loop: true
       }
 
-      new Typed('.typing', options)
+      new Typed('.typing', options);
     }
   },
 
   created() {
-    document.title = 'Home' 
+    document.title = 'Home';
   },
 
   mounted() {
-    this.animation()
+    this.animation();
   }
 }
 </script>

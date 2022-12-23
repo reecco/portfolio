@@ -1,30 +1,42 @@
 <template>
   <div class="contact__form">
-    <div id="vis-modal" class="modal">
-      <div class="content-modal">
-        <div class="body-modal">
-          <p class="message-success">{{ success }}</p>
-          <button class="btn-outline-success" @click="closeModal('vis-modal')">Close</button>
-        </div>
-      </div>
-    </div>
+    <Modal v-if="showModal" :message="success" />
     <h2 class="contact__form-title">Send a message</h2>
     <p class="message-error">{{ error }}</p>
     <form @submit="sendEmail">
-      <input type="text" name="email" class="input input-email" id="input-email" placeholder="Email" v-model="email">
-      <input type="text" name="name" class="input input-name" id="input-name" placeholder="Name" v-model="name">
-      <textarea type="text" name="text" class="textarea" id="textarea-text" placeholder="Message"
-        v-model="text"></textarea>
+      <input 
+        type="text" 
+        :class="{'input-email': true, 'alert-error': emailStyle}" 
+        placeholder="Email" 
+        v-model="email"
+      >
+      <input 
+        type="text" 
+        :class="{'input-name': true, 'alert-error': nameStyle}" 
+        placeholder="Name" 
+        v-model="name"
+      >
+      <textarea 
+        type="text" 
+        :class="{'textarea': true, 'alert-error': textStyle}" 
+        placeholder="Message" 
+        v-model="text">
+      </textarea>
       <button class="btn-send">Send</button>
     </form>
   </div>
 </template>
 
 <script>
-import api from '@/service/api.js'
+import { sendEmail } from '@/service/api.js';
+import Modal from '../Modal/Modal.vue';
 
 export default {
   name: 'ContactForm',
+
+  components: {
+    Modal
+  },
 
   data() {
     return {
@@ -32,71 +44,70 @@ export default {
       name: '',
       text: '',
       success: '',
-      error: ''
+      error: '',
+      emailStyle: false,
+      nameStyle: false,
+      textStyle: false,
+      showModal: false
     }
   },
 
   methods: {
     async sendEmail(event) {
-      event.preventDefault()
+      event.preventDefault();
 
-      let email = this.email == '' || this.email == ' '
-      let name = this.name == '' || this.name == ' '
-      let text = this.text == '' || this.text == ' '
+      let email = this.email == '' || this.email == ' ';
+      let name = this.name == '' || this.name == ' ';
+      let text = this.text == '' || this.text == ' ';
 
       if (email || name || text) {
-        this.error = 'Fill in the fields correctly.'
-        setTimeout(() => this.error = '', 5000)
+        this.error = 'Fill in the fields correctly.';
+        setTimeout(() => this.error = '', 5000);
 
         if (email) {
-          this.styleInput('input-email')
+          this.changeStyle('email');
         } 
         if (name) {
-          this.styleInput('input-name')
+          this.changeStyle('name');
         } 
         if (text) {
-          this.styleInput('textarea-text')
+          this.changeStyle('text');
         }
       } else {
-        const res = await api(this.email, this.name, this.text)
+        const res = await sendEmail(this.email, this.name, this.text);
 
-        if (res.status == 201) {
-          this.success = 'Message sent successfully!'
-          this.openModal('vis-modal')
+        if (res.status == 200) {
+          this.success = 'Message sent successfully!';
+          this.showModal = !this.showModal;
           setTimeout(() => {
-            this.closeModal('vis-modal')
+            this.showModal = !this.showModal;
           }, 10000)
         } else {
-          this.error = res.response.data.message
-          setTimeout(() => this.error = '', 4000)
+          this.error = res.response.data.message;
+          setTimeout(() => this.error = '', 4000);
         }
 
-        this.email = ''
-        this.name = ''
-        this.text = ''
+        this.email = '';
+        this.name = '';
+        this.text = '';
       }
     },
 
-    openModal(loadModal) {
-      let modal = document.getElementById(loadModal)
+    changeStyle(input) {
+      if (input === 'email') {
+        this.emailStyle = !this.emailStyle;
+        setTimeout(() => this.emailStyle = !this.emailStyle, 5000);
+      }
 
-      modal.style.display = 'block'
+      if (input === 'name') {
+        this.nameStyle = !this.nameStyle;
+        setTimeout(() => this.nameStyle = !this.nameStyle, 5000);
+      }
 
-      document.body.style.overflow = 'hidden'
-    },
-
-    closeModal(closeModal) {
-      let modal = document.getElementById(closeModal)
-
-      modal.style.display = 'none'
-
-      document.body.style.overflow = 'auto'
-    },
-
-    styleInput(id) {
-      document.getElementById(id).style.border = '2px solid red'
-
-      setTimeout(() => document.getElementById(id).style.border = '', 5000)
+      if (input === 'text') {
+        this.textStyle = !this.textStyle;
+        setTimeout(() => this.textStyle = !this.textStyle, 5000);
+      }
     }
   }
 }
