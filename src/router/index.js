@@ -16,6 +16,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: () => import('../views/Contact/Contact.vue')
+  },
+  {
+    path: '/activity-github',
+    name: 'activity-github',
+    component: () => import('../views/GitHub/GitHub.vue')
   }
 ]
 
