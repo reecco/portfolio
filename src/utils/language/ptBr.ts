@@ -9,7 +9,7 @@ export default {
   },
   about: {
     title1: "Sobre",
-    text1: "Olá, sou um desenvolvedor de software comprometido em criar soluções web úteis e práticas para o cotidiano das pessoas.",
+    text1: "Olá, sou um desenvolvedor de software apaixonado em criar soluções web úteis e práticas para o cotidiano das pessoas.",
     text2: "Tenho interesse por computadores desde criança, quando comecei a jogar e editar textos em código HTML no computador da minha irmã.",
     text3: "Possuo experiência com Node.js, Python, React.js, Vue.js, Tailwind CSS, MongoDB e MySQL.",
     title2: "Interesses"
